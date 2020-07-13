@@ -13,4 +13,4 @@ Simply open up the app and play any song on Apple Music. You should see on your 
 Sure! You can contribute by filing issues or opening PRs right here.
 
 ### Who made this app?
-My name is Lucas Gusmão and I’m a developer! You can check more of my stuff out at (lucasalgus.dev)[https://lucasalgus.dev]. I am in no way affiliated with Apple or Discord.
+My name is Lucas Gusmão and I’m a developer! You can check more of my stuff out at [lucasalgus.dev](https://lucasalgus.dev). I am in no way affiliated with Apple or Discord.
