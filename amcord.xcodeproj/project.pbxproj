@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A07991CA24CD0D5C0036AEDF /* AppStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07991C924CD0D5C0036AEDF /* AppStatusEnum.swift */; };
+		A07991CE24CD4B2D0036AEDF /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07991CD24CD4B2D0036AEDF /* Song.swift */; };
+		A07991D024CE1CE10036AEDF /* SongStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07991CF24CE1CE10036AEDF /* SongStatusEnum.swift */; };
 		A0E1F97324BC212400DE8412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E1F97224BC212400DE8412 /* AppDelegate.swift */; };
 		A0E1F97524BC212400DE8412 /* SongHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E1F97424BC212400DE8412 /* SongHandler.swift */; };
 		A0E1F97A24BC212D00DE8412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E1F97824BC212D00DE8412 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A07991C924CD0D5C0036AEDF /* AppStatusEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatusEnum.swift; sourceTree = "<group>"; };
+		A07991CD24CD4B2D0036AEDF /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		A07991CF24CE1CE10036AEDF /* SongStatusEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongStatusEnum.swift; sourceTree = "<group>"; };
 		A0E1F96F24BC212400DE8412 /* amcord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amcord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E1F97224BC212400DE8412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0E1F97424BC212400DE8412 /* SongHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongHandler.swift; sourceTree = "<group>"; };
@@ -62,6 +68,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A07991D124CE1CED0036AEDF /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				A0E1F98524BC218000DE8412 /* discord_game_sdk.h */,
+				A0E1F98324BC218000DE8412 /* discord.c */,
+				A0E1F98424BC218000DE8412 /* discord.h */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		A07991D524CFA4790036AEDF /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				A07991C924CD0D5C0036AEDF /* AppStatusEnum.swift */,
+				A07991CF24CE1CE10036AEDF /* SongStatusEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		A07991D624CFA48D0036AEDF /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				A0E1F97424BC212400DE8412 /* SongHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
+		A07991D724CFA4940036AEDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A07991CD24CD4B2D0036AEDF /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A0E1F96624BC212400DE8412 = {
 			isa = PBXGroup;
 			children = (
@@ -82,12 +123,12 @@
 		A0E1F97124BC212400DE8412 /* amcord */ = {
 			isa = PBXGroup;
 			children = (
-				A0E1F98524BC218000DE8412 /* discord_game_sdk.h */,
-				A0E1F98324BC218000DE8412 /* discord.c */,
-				A0E1F98424BC218000DE8412 /* discord.h */,
+				A07991D624CFA48D0036AEDF /* Handlers */,
+				A07991D524CFA4790036AEDF /* Enums */,
+				A07991D724CFA4940036AEDF /* Model */,
+				A07991D124CE1CED0036AEDF /* Lib */,
 				A0E1F98224BC217F00DE8412 /* amcord-Bridging-Header.h */,
 				A0E1F97224BC212400DE8412 /* AppDelegate.swift */,
-				A0E1F97424BC212400DE8412 /* SongHandler.swift */,
 				A0E1F98F24BC224000DE8412 /* Assets.xcassets */,
 				A0E1F97824BC212D00DE8412 /* Main.storyboard */,
 				A0E1F97B24BC212D00DE8412 /* Info.plist */,
@@ -177,9 +218,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A07991CA24CD0D5C0036AEDF /* AppStatusEnum.swift in Sources */,
+				A07991D024CE1CE10036AEDF /* SongStatusEnum.swift in Sources */,
 				A0E1F97524BC212400DE8412 /* SongHandler.swift in Sources */,
 				A0E1F98624BC218000DE8412 /* discord.c in Sources */,
 				A0E1F97324BC212400DE8412 /* AppDelegate.swift in Sources */,
+				A07991CE24CD4B2D0036AEDF /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,11 +4,65 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     var statusBar: NSStatusBar!
     var statusBarItem: NSStatusItem!
+    var statusBarMenu: NSMenu!
+    var appStatus = AppStatus.initializing.rawValue
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        SongHandler.initialize()
-        initializeDiscordSDK()
         initializeStatusBar()
+        
+        SongHandler.addObserver { (song, status) in
+            // Destroys the SDK when AM has been inactive for over 3 minutes
+            // past the song's duration and sets the status to paused
+            if status == .inactive && isDiscordSDKInitialized() {
+                destroyDiscordSDK()
+                self.updateAppStatus(appStatus: .paused)
+                return
+            }
+
+            // Sets the status to discord uninitialized when Discord
+            // isn't open
+            if !self.isDiscordOpen() {
+                self.updateAppStatus(appStatus: .discordUninitialized)
+                return
+            }
+
+            // Initializes the SDK if it is uninitialized and sets
+            // the status to initializing
+            if !isDiscordSDKInitialized() {
+                self.updateAppStatus(appStatus: .initializing)
+                initializeDiscordSDK()
+            }
+
+            
+            if let s = song {
+                switch status {
+                case .playing:
+                    setSong(strdup(s.title), strdup(s.album), strdup(s.artist))
+                    break
+                case .paused:
+                    pauseSong()
+                default:
+                    break
+                }
+
+                self.updateAppStatus(appStatus: .running)
+            }
+        }
+    }
+    
+    func updateAppStatus(appStatus: AppStatus) {
+        statusBarMenu.item(at: 0)?.title = "amcord: \(appStatus.rawValue)"
+    }
+    
+    func isDiscordOpen() -> Bool {
+        let apps = NSWorkspace.shared.runningApplications
+        for app in apps {
+            if app.localizedName! == "Discord" {
+                return true
+            }
+        }
+        
+        return false
     }
     
     func initializeStatusBar() {
@@ -19,11 +73,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         statusBarItem!.button?.title =  "♫"
         
-        let statusBarMenu = NSMenu(title: "amcord")
+        statusBarMenu = NSMenu(title: "amcord")
         statusBarItem!.menu = statusBarMenu
         
         statusBarMenu.addItem(
-                withTitle: "amcord: Running",
+            withTitle: "amcord: \(appStatus)",
                 action: nil,
                 keyEquivalent: "")
         
@@ -37,4 +91,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApplication.shared.terminate(self)
     }
 }
-

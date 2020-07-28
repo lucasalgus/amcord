@@ -10,10 +10,12 @@
 #define discord_h
 
 #include <stdio.h>
+#include <stdbool.h>
 
 void initializeDiscordSDK(void);
+bool isDiscordSDKInitialized(void);
 void destroyDiscordSDK(void);
-void playSong(char songName[], char albumName[], char artistName[]);
+void setSong(char songName[], char albumName[], char artistName[]);
 void pauseSong(void);
 
 #endif /* discord_h */

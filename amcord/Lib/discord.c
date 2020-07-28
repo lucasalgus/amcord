@@ -55,12 +55,18 @@ void initializeDiscordSDK() {
     app.application = app.core->get_application_manager(app.core);
     app.activity_manager = app.core->get_activity_manager(app.core);
     
-    printf("Initialization finished ✅\n");
+    printf("SDK Initialized ✅\n");
+    isInitialized = true;
+}
+
+bool isDiscordSDKInitialized() {
+    return isInitialized;
 }
 
 void destroyDiscordSDK() {
     app.core->destroy(app.core);
-    initializeDiscordSDK();
+    printf("SDK Destroyed 🚫\n");
+    isInitialized = false;
 }
 
 void updateSong(bool isPaused) {
@@ -85,7 +91,7 @@ void updateSong(bool isPaused) {
     app.core->run_callbacks(app.core);
 }
 
-void playSong(char songName[], char albumName[], char artistName[]) {
+void setSong(char songName[], char albumName[], char artistName[]) {
     strcpy(song, songName);
     strcpy(album, albumName);
     strcpy(artist, artistName);
