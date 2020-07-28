@@ -1,4 +1,7 @@
 import Cocoa
+import AppCenter
+import AppCenterAnalytics
+import AppCenterCrashes
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -8,7 +11,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var appStatus = AppStatus.initializing.rawValue
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        // Initializes the app's UI
         initializeStatusBar()
+        
+        // Initializes AppCenter analytics
+        MSAppCenter.start("608b5e16-855f-4664-9df3-94a998a0281b", withServices:[
+            MSAnalytics.self,
+            MSCrashes.self
+        ])
+
         
         SongHandler.addObserver { (song, status) in
             // Destroys the SDK when AM has been inactive for over 3 minutes

@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		508C985A3381F5D2437BC5A8 /* Pods_amcord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB85535F7C38CA87D078F2A8 /* Pods_amcord.framework */; };
 		A07991CA24CD0D5C0036AEDF /* AppStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07991C924CD0D5C0036AEDF /* AppStatusEnum.swift */; };
 		A07991CE24CD4B2D0036AEDF /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07991CD24CD4B2D0036AEDF /* Song.swift */; };
 		A07991D024CE1CE10036AEDF /* SongStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07991CF24CE1CE10036AEDF /* SongStatusEnum.swift */; };
+		A07991D924CFA9BB0036AEDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A07991D824CFA9BB0036AEDF /* Assets.xcassets */; };
+		A07991DC24CFA9E60036AEDF /* discord_game_sdk.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = A07991DA24CFA9E60036AEDF /* discord_game_sdk.bundle */; };
+		A07991DD24CFA9E60036AEDF /* discord_game_sdk.bundle in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A07991DA24CFA9E60036AEDF /* discord_game_sdk.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		A07991DE24CFA9E60036AEDF /* discord_game_sdk.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A07991DB24CFA9E60036AEDF /* discord_game_sdk.dylib */; };
+		A07991DF24CFA9E60036AEDF /* discord_game_sdk.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A07991DB24CFA9E60036AEDF /* discord_game_sdk.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		A0E1F97324BC212400DE8412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E1F97224BC212400DE8412 /* AppDelegate.swift */; };
 		A0E1F97524BC212400DE8412 /* SongHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E1F97424BC212400DE8412 /* SongHandler.swift */; };
 		A0E1F97A24BC212D00DE8412 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0E1F97824BC212D00DE8412 /* Main.storyboard */; };
 		A0E1F98624BC218000DE8412 /* discord.c in Sources */ = {isa = PBXBuildFile; fileRef = A0E1F98324BC218000DE8412 /* discord.c */; };
-		A0E1F98A24BC222600DE8412 /* discord_game_sdk.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E1F98824BC222600DE8412 /* discord_game_sdk.dylib */; };
-		A0E1F98B24BC222600DE8412 /* discord_game_sdk.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A0E1F98824BC222600DE8412 /* discord_game_sdk.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A0E1F98C24BC222600DE8412 /* discord_game_sdk.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = A0E1F98924BC222600DE8412 /* discord_game_sdk.bundle */; };
-		A0E1F98D24BC222600DE8412 /* discord_game_sdk.bundle in Embed Libraries */ = {isa = PBXBuildFile; fileRef = A0E1F98924BC222600DE8412 /* discord_game_sdk.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		A0E1F99024BC224000DE8412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0E1F98F24BC224000DE8412 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,8 +29,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A0E1F98B24BC222600DE8412 /* discord_game_sdk.dylib in Embed Libraries */,
-				A0E1F98D24BC222600DE8412 /* discord_game_sdk.bundle in Embed Libraries */,
+				A07991DF24CFA9E60036AEDF /* discord_game_sdk.dylib in Embed Libraries */,
+				A07991DD24CFA9E60036AEDF /* discord_game_sdk.bundle in Embed Libraries */,
 			);
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,6 +41,9 @@
 		A07991C924CD0D5C0036AEDF /* AppStatusEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatusEnum.swift; sourceTree = "<group>"; };
 		A07991CD24CD4B2D0036AEDF /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		A07991CF24CE1CE10036AEDF /* SongStatusEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongStatusEnum.swift; sourceTree = "<group>"; };
+		A07991D824CFA9BB0036AEDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A07991DA24CFA9E60036AEDF /* discord_game_sdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = discord_game_sdk.bundle; sourceTree = "<group>"; };
+		A07991DB24CFA9E60036AEDF /* discord_game_sdk.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = discord_game_sdk.dylib; sourceTree = "<group>"; };
 		A0E1F96F24BC212400DE8412 /* amcord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = amcord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E1F97224BC212400DE8412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0E1F97424BC212400DE8412 /* SongHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongHandler.swift; sourceTree = "<group>"; };
@@ -50,9 +54,9 @@
 		A0E1F98324BC218000DE8412 /* discord.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = discord.c; sourceTree = "<group>"; };
 		A0E1F98424BC218000DE8412 /* discord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = discord.h; sourceTree = "<group>"; };
 		A0E1F98524BC218000DE8412 /* discord_game_sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = discord_game_sdk.h; sourceTree = "<group>"; };
-		A0E1F98824BC222600DE8412 /* discord_game_sdk.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = discord_game_sdk.dylib; path = ../AppleMusicDiscordIntegration/discord_game_sdk.dylib; sourceTree = "<group>"; };
-		A0E1F98924BC222600DE8412 /* discord_game_sdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = discord_game_sdk.bundle; path = ../AppleMusicDiscordIntegration/discord_game_sdk.bundle; sourceTree = "<group>"; };
-		A0E1F98F24BC224000DE8412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../AppleMusicDiscordIntegration/AppleMusicDiscordIntegration/Assets.xcassets; sourceTree = "<group>"; };
+		A6343FAF025C279136600C95 /* Pods-amcord.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amcord.debug.xcconfig"; path = "Target Support Files/Pods-amcord/Pods-amcord.debug.xcconfig"; sourceTree = "<group>"; };
+		DB85535F7C38CA87D078F2A8 /* Pods_amcord.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_amcord.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBB89850D711892F8F18EDCB /* Pods-amcord.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-amcord.release.xcconfig"; path = "Target Support Files/Pods-amcord/Pods-amcord.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0E1F98A24BC222600DE8412 /* discord_game_sdk.dylib in Frameworks */,
-				A0E1F98C24BC222600DE8412 /* discord_game_sdk.bundle in Frameworks */,
+				A07991DE24CFA9E60036AEDF /* discord_game_sdk.dylib in Frameworks */,
+				A07991DC24CFA9E60036AEDF /* discord_game_sdk.bundle in Frameworks */,
+				508C985A3381F5D2437BC5A8 /* Pods_amcord.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +114,7 @@
 				A0E1F97124BC212400DE8412 /* amcord */,
 				A0E1F97024BC212400DE8412 /* Products */,
 				A0E1F98724BC222600DE8412 /* Frameworks */,
+				B8B4120F161E8FD8BF53455F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,7 +135,7 @@
 				A07991D124CE1CED0036AEDF /* Lib */,
 				A0E1F98224BC217F00DE8412 /* amcord-Bridging-Header.h */,
 				A0E1F97224BC212400DE8412 /* AppDelegate.swift */,
-				A0E1F98F24BC224000DE8412 /* Assets.xcassets */,
+				A07991D824CFA9BB0036AEDF /* Assets.xcassets */,
 				A0E1F97824BC212D00DE8412 /* Main.storyboard */,
 				A0E1F97B24BC212D00DE8412 /* Info.plist */,
 				A0E1F97C24BC212D00DE8412 /* amcord.entitlements */,
@@ -140,10 +146,21 @@
 		A0E1F98724BC222600DE8412 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A0E1F98924BC222600DE8412 /* discord_game_sdk.bundle */,
-				A0E1F98824BC222600DE8412 /* discord_game_sdk.dylib */,
+				A07991DA24CFA9E60036AEDF /* discord_game_sdk.bundle */,
+				A07991DB24CFA9E60036AEDF /* discord_game_sdk.dylib */,
+				DB85535F7C38CA87D078F2A8 /* Pods_amcord.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8B4120F161E8FD8BF53455F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6343FAF025C279136600C95 /* Pods-amcord.debug.xcconfig */,
+				FBB89850D711892F8F18EDCB /* Pods-amcord.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +170,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0E1F97F24BC212D00DE8412 /* Build configuration list for PBXNativeTarget "amcord" */;
 			buildPhases = (
+				EB5A43E4CC5934697C6561B6 /* [CP] Check Pods Manifest.lock */,
 				A0E1F96B24BC212400DE8412 /* Sources */,
 				A0E1F96C24BC212400DE8412 /* Frameworks */,
 				A0E1F96D24BC212400DE8412 /* Resources */,
@@ -206,12 +224,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0E1F99024BC224000DE8412 /* Assets.xcassets in Resources */,
+				A07991D924CFA9BB0036AEDF /* Assets.xcassets in Resources */,
 				A0E1F97A24BC212D00DE8412 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EB5A43E4CC5934697C6561B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-amcord-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A0E1F96B24BC212400DE8412 /* Sources */ = {
@@ -356,6 +399,7 @@
 		};
 		A0E1F98024BC212D00DE8412 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6343FAF025C279136600C95 /* Pods-amcord.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -367,6 +411,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasalgus.amcord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "amcord/amcord-Bridging-Header.h";
@@ -377,6 +426,7 @@
 		};
 		A0E1F98124BC212D00DE8412 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBB89850D711892F8F18EDCB /* Pods-amcord.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -388,6 +438,11 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				MARKETING_VERSION = 0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasalgus.amcord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "amcord/amcord-Bridging-Header.h";
