@@ -91,16 +91,11 @@ void updateSong(bool isPaused) {
     app.core->run_callbacks(app.core);
 }
 
-void setSong(char songName[], char albumName[], char artistName[]) {
+void setSong(char songName[], char albumName[], char artistName[], bool isPaused) {
     strcpy(song, songName);
     strcpy(album, albumName);
     strcpy(artist, artistName);
     
-    updateSong(false);
-    printf("Song playing ▶️\n");
-}
-
-void pauseSong() {
-    updateSong(true);
-    printf("Song paused ⏸\n");
+    updateSong(isPaused);
+    printf("Song set 🎵\n");
 }

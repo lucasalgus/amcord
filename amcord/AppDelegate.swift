@@ -35,15 +35,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
             
             if let s = song {
-                switch status {
-                case .playing:
-                    setSong(strdup(s.title), strdup(s.album), strdup(s.artist))
-                    break
-                case .paused:
-                    pauseSong()
-                default:
-                    break
-                }
+                setSong(
+                    strdup(s.title),
+                    strdup(s.album),
+                    strdup(s.artist),
+                    status == .paused
+                )
 
                 self.updateAppStatus(appStatus: .running)
             }

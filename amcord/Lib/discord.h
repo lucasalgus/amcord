@@ -15,7 +15,6 @@
 void initializeDiscordSDK(void);
 bool isDiscordSDKInitialized(void);
 void destroyDiscordSDK(void);
-void setSong(char songName[], char albumName[], char artistName[]);
-void pauseSong(void);
+void setSong(char songName[], char albumName[], char artistName[], bool isPaused);
 
 #endif /* discord_h */
