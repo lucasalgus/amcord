@@ -8,7 +8,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var statusBar: NSStatusBar!
     var statusBarItem: NSStatusItem!
     var statusBarMenu: NSMenu!
-    var appStatus = AppStatus.initializing.rawValue
+    var appStatus = AppStatus.paused
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Initializes the app's UI
@@ -30,21 +30,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 return
             }
 
-            // Sets the status to discord uninitialized when Discord
+            // Sets the status to paused when Discord
             // isn't open
             if !self.isDiscordOpen() {
-                self.updateAppStatus(appStatus: .discordUninitialized)
+                self.updateAppStatus(appStatus: .paused)
                 return
             }
 
             // Initializes the SDK if it is uninitialized and sets
             // the status to initializing
             if !isDiscordSDKInitialized() {
-                self.updateAppStatus(appStatus: .initializing)
+                self.updateAppStatus(appStatus: .paused)
                 initializeDiscordSDK()
             }
 
-            
+
             if let s = song {
                 setSong(
                     strdup(s.title),

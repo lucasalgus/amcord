@@ -34,7 +34,7 @@ class SongHandler {
         if let duration = songDuration {
             songTime += 1
             
-            if songTime == duration / 1000 + 60 * 3 {
+            if songTime == duration {
                 songChangedCallback(nil, .inactive)
             }
         }
