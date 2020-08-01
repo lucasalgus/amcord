@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
@@ -27,10 +28,26 @@ void callback() {
 struct Application app;
 struct DiscordActivity activity;
 
-char song[1024];
-char album[1024];
-char artist[1024];
+char song[128];
+char album[128];
+char artist[128];
 bool isInitialized = false;
+
+char* safeString(char string[]) {
+    if (strlen(string) > 128) {
+        string[127] = '\0';
+    }
+    
+    return string;
+}
+
+char* addEllipsis(char string[]) {
+    string[126] = '.';
+    string[125] = '.';
+    string[124] = '.';
+    
+    return string;
+}
 
 void initializeDiscordSDK() {
     memset(&app, 0, sizeof(app));
@@ -70,8 +87,8 @@ void destroyDiscordSDK() {
 }
 
 void updateSong(bool isPaused) {
-    char songStr[128];
-    char artistStr[128];
+    char songStr[1024];
+    char artistStr[1024];
     if (isPaused) {
         strcpy(songStr, "⏸ ");
     } else {
@@ -84,18 +101,18 @@ void updateSong(bool isPaused) {
     strcpy(artistStr, "🥁 ");
     strcat(artistStr, artist);
     
-    strcpy(activity.details, songStr);
-    strcpy(activity.state, artistStr);
+    strcpy(activity.details, addEllipsis(safeString(songStr)));
+    strcpy(activity.state, addEllipsis(safeString(artistStr)));
     
     app.activity_manager->update_activity(app.activity_manager, &activity, callbackData, callback);
     app.core->run_callbacks(app.core);
 }
 
 void setSong(char songName[], char albumName[], char artistName[], bool isPaused) {
-    strcpy(song, songName);
-    strcpy(album, albumName);
-    strcpy(artist, artistName);
-    
+    strcpy(song, safeString(songName));
+    strcpy(album, safeString(albumName));
+    strcpy(artist, safeString(artistName));
+
     updateSong(isPaused);
     printf("Song set 🎵\n");
 }
