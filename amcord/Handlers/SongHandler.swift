@@ -31,10 +31,10 @@ class SongHandler {
     }
     
     static func timerHandler(_: Timer) {
-        if let duration = songDuration {
+        if let duration: Int = songDuration {
             songTime += 1
             
-            if songTime == duration {
+            if songTime == duration / 1000 {
                 songChangedCallback(nil, .inactive)
             }
         }

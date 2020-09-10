@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		508C985A3381F5D2437BC5A8 /* Pods_amcord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB85535F7C38CA87D078F2A8 /* Pods_amcord.framework */; };
+		A028102E24D53AAD00202EFA /* Pods_amcord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB85535F7C38CA87D078F2A8 /* Pods_amcord.framework */; };
 		A07991CA24CD0D5C0036AEDF /* AppStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07991C924CD0D5C0036AEDF /* AppStatusEnum.swift */; };
 		A07991CE24CD4B2D0036AEDF /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07991CD24CD4B2D0036AEDF /* Song.swift */; };
 		A07991D024CE1CE10036AEDF /* SongStatusEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07991CF24CE1CE10036AEDF /* SongStatusEnum.swift */; };
@@ -65,8 +65,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A07991DE24CFA9E60036AEDF /* discord_game_sdk.dylib in Frameworks */,
+				A028102E24D53AAD00202EFA /* Pods_amcord.framework in Frameworks */,
 				A07991DC24CFA9E60036AEDF /* discord_game_sdk.bundle in Frameworks */,
-				508C985A3381F5D2437BC5A8 /* Pods_amcord.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +317,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -377,6 +378,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -403,8 +405,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = amcord/amcord.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U83766QH6Q;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = amcord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -414,7 +419,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasalgus.amcord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "amcord/amcord-Bridging-Header.h";
@@ -430,8 +435,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = amcord/amcord.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U83766QH6Q;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = amcord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -441,7 +449,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				MARKETING_VERSION = 0.3;
+				MARKETING_VERSION = 0.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasalgus.amcord;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "amcord/amcord-Bridging-Header.h";
